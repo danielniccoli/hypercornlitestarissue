@@ -30,4 +30,4 @@ def option3():
 # Option1 throws a hypercorn.utils.LifespanTimeoutError
 # Option2, while syntactically correct, also throws a hypercorn.utils.LifespanTimeoutError
 # Option3, while wrong code, works
-app = option2()
+app = option3()
