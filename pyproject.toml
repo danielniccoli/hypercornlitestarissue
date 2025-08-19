@@ -1,0 +1,21 @@
+[project]
+name = "sample"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "hypercorn>=0.17.3",
+    "litestar>=2.16.0",
+    "pydantic[email]>=2.10.6",
+    "restate-sdk[client,serde]>=0.8.1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
+[tool.uv.sources]
+restate-sdk = { git = "https://github.com/restatedev/sdk-python.git", rev = "d2e54ebc2a53e66d7711bebedfe0ded93e22cfdb" }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
